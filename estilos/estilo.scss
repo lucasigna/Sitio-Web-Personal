@@ -1,0 +1,457 @@
+@import 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: $colorNaranjaFondo;
+    header{
+        display: flex;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+        margin: 10px auto;
+        filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+        z-index: 5;
+        nav{
+            background-color: $colorNegro;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: center;
+            margin: 0 auto;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: all 0.5s ease;
+            transition-property: all;
+            transition-duration: 1s;
+            ul{
+                display: flex;
+                justify-content: space-between;
+                align-content: center;
+                margin: 0 auto;
+                width: 60vw;
+                li{
+                    list-style-type: none;
+                    margin: auto 0;
+                    a{
+                        font-family: $fuente;
+                        font-weight: 300;
+                        text-decoration: none;
+                        color: $colorBlanco;
+                        &:hover{
+                            color: $colorNaranjaFondo;
+                        }
+                    }
+                }
+            }
+            .imgLogo{
+                height: 60px;
+            }
+        }
+    }
+    main{
+        .sectionSobreMi{
+            padding-top: 100px;
+            display: grid;
+            grid-template-columns: 0.5fr repeat(3, 1fr);
+            grid-template-areas: ". h1 h1 h1" ". contenido contenido contenido";
+            &__Titulo{
+                grid-area: h1;
+                font-family: $fuente;
+                color: $colorNegro;
+                font-size: 30px;
+                margin-left: 5px;
+                margin-bottom: 5px;
+            }
+            &__divGrid{
+                grid-area: contenido;
+                background-color: $colorNegro;
+                padding: 20px;
+                padding-bottom: 30px;
+                border-radius: 20px 0 0 20px;
+                display: grid;
+                grid-template-areas: "nombre nombre" "foto texto";
+                &__nombreH2{
+                    grid-area: nombre;
+                    font-family: $fuente;
+                    color: $colorBlanco;
+                    font-weight: 400;
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                }
+                &__imagen{
+                    grid-area: foto;
+                    height: 250px;
+                }
+                &__textoSobreMi{
+                    grid-area: texto;
+                    font-family: $fuente;
+                    color: $colorBlanco;
+                    font-weight: 300;
+                    margin-right: 10vw;
+                    font-size: 15px;
+                    line-height: 25px;
+                    padding-left: 10px;
+                }
+            }
+        }
+        .sectionEducacion{
+            padding-top: 100px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-areas: "titulo ." "contenido .";
+            margin: 20px 0;
+            &__Titulo{
+                grid-area: titulo;
+                font-family: $fuente;
+                color: $colorNegro;
+                font-size: 30px;
+                text-align: right;
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+            &__divGrid{
+                grid-area: contenido;
+                background-color: $colorNegro;
+                padding: 20px;
+                padding-bottom: 30px;
+                border-radius: 0 20px 20px 0;
+                display: flex;
+                justify-content: flex-end;
+                &__divFormacion{
+                    margin-right: 40px;
+                    &__h2{
+                        font-family: $fuente;
+                        font-weight: 400;
+                        font-size: 25px;
+                        color: $colorNaranjaFondo;
+                        margin-bottom: 5px;
+                    }
+                    &__UTN{
+                        display: flex;
+                        margin-bottom: 20px;
+                        margin-left: 5px;
+                    }
+                    &__huergo{
+                        display: flex;
+                        margin-left: 5px;
+                    }
+
+                }
+                &__divCertificados{
+                    &__h2{
+                        font-family: $fuente;
+                        font-weight: 400;
+                        font-size: 25px;
+                        color: $colorNaranjaFondo;
+                        margin-bottom: 5px;
+                    }
+                    &__dw{
+                        display: flex;
+                        margin-left: 5px;
+                    }
+                }
+                .hr{
+                    background-color: $colorBlanco;
+                    width: 2px;
+                    height: 60px;
+                    margin-right: 4px;
+                }
+                .titulo{
+                    font-family: $fuente;
+                    font-size: 15px;
+                    font-weight: 400;
+                    color: $colorBlanco;
+                    margin-bottom: 2px;
+                }
+                .lugar{
+                    font-family: $fuente;
+                    font-size: 15px;
+                    font-weight: 300;
+                    color: $colorBlanco;
+                    margin-bottom: 2px;
+                }
+                .tiempo{
+                    font-family: $fuente;
+                    font-size: 15px;
+                    font-weight: 300;
+                    color: $colorBlanco;
+                    margin-bottom: 2px;
+                }
+                .credencial{
+                    font-family: $fuente;
+                    font-size: 15px;
+                    font-weight: 300;
+                    color: $colorAzul;
+                    margin-bottom: 2px;
+                    text-decoration: none;
+                }
+            }
+        }
+        .sectionPortfolio{
+            padding-top: 100px;
+            display: grid;
+            grid-template-columns: 1fr 6fr;
+            grid-template-areas: ". titulo" ". contenido";
+            margin: 20px 0;
+            &__Titulo{
+                grid-area: titulo;
+                font-family: $fuente;
+                color: $colorNegro;
+                font-size: 30px;
+                margin-left: 5px;
+                margin-bottom: 5px;
+            }
+            &__divGrid{
+                grid-area: contenido;
+                background-color: $colorNegro;
+                padding: 20px;
+                border-radius: 20px 0 0 20px;
+                display: flex;
+                flex-wrap: wrap;
+                padding-right: 5vw;
+                .divProyecto{
+                    width: 300px;
+                    position: relative;
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                    overflow: hidden;
+                    z-index: 1;
+                    .fotoProyecto{
+                        width: 300px;
+                        border-radius: 20px;
+                        cursor: pointer;
+                    }
+                    .divAbove{
+                        border-radius: 20px;
+                        width: 270px;
+                        min-height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 10;
+                        background-color: $colorNegro60;
+                        padding: 0 15px;
+                        padding-top: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        align-content: center;
+                        &__titulo{
+                            font-family: $fuente;
+                            color: $colorBlanco;
+                            margin-bottom: 10px;
+                            font-weight: 600;
+                        }
+                        &__btn{
+                            width: 270px;
+                            font-family: $fuente;
+                            font-weight: 300;
+                            color: $colorBlanco;
+                            background-color: $transparente;
+                            border: 1px solid $colorBlanco;
+                            border-radius: 10px;
+                            height: 40px;
+                            margin-bottom: 10px;
+                            cursor: pointer;
+                            transition: 0.2s;
+                            &:hover{
+                                color: $colorNegro60;
+                                background-color: $colorBlanco;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sectionContacto{
+            padding-top: 100px;
+            display: grid;
+            grid-template-columns: 1fr 6fr 1.5fr 1fr;
+            grid-template-areas: "titulo titulo . ." "contenido contenido btn .";
+            margin: 20px 0;
+            &__Titulo{
+                grid-area: titulo;
+                font-family: $fuente;
+                color: $colorNegro;
+                font-size: 30px;
+                text-align: right;
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+            &__divFlex{
+                grid-area: contenido;
+                background-color: $colorNegro;
+                padding: 20px;
+                border-radius: 0 20px 20px 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-content: center;
+                padding-left: 200px;
+                div{
+                    display: flex;
+                    align-content: center;
+                }
+                img{
+                    height: 40px;
+                    margin-left: 10px;
+                }
+                &__textoMail{
+                    font-family: $fuente;
+                    color: $colorBlanco;
+                    font-weight: 300;
+                    margin: auto 0;
+                    margin-left: 10px;
+                }
+            }
+            &__btnCV{
+                grid-area: btn;
+                background-color: $colorNegro;
+                border-radius: 20px;
+                border: none;
+                margin-left: 20px;
+                filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+                a{
+                    text-decoration: none;
+                    color: $colorBlanco;
+                    font-family: $fuente;
+                    font-weight: 400;
+                    font-size: 20px;
+                    &:hover{
+                        color: $colorNaranjaFondo;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Para vista en tablet */
+
+@media only screen and (min-width: 600px) and (max-width: 960px) {
+
+    body{
+        main{
+            .sectionSobreMi{
+                grid-template-columns: 0.5fr repeat(3, 1fr);
+                grid-template-areas: ". h1 h1 h1" ". contenido contenido contenido";
+                &__Titulo{
+                    font-size: 30px;
+                }
+                &__divGrid{
+                    display: flex;
+                    flex-direction: column;
+                    &__nombreH2{
+                        font-size: 30px;
+                    }
+                    &__imagen{
+                        display: none;
+                    }
+                    &__textoSobreMi{
+                        margin-right: 20px;
+                        font-size: 15px;
+                    }
+                }
+            }
+            .sectionContacto{
+                grid-template-columns: 1fr 5fr 1.5fr;
+                grid-template-areas: "titulo titulo ." "contenido contenido btn";
+                &__divFlex{
+                    padding-left: 5vw;
+                }
+                &__btnCV{
+                    margin-right: 20px;
+                    a{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Para vista en celular */
+
+@media only screen and (max-width: 600px) {
+
+    body{
+        header{
+            position: static;
+            margin: 0;
+            nav{
+                background-color: $colorNegro;
+                width: 100vw;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-content: center;
+                padding: 10px 20px;
+                border-radius: 0;
+                transition: all 0.5s ease;
+                transition-property: all;
+                transition-duration: 1s;
+            }
+        }
+        main{
+            .sectionSobreMi{
+                grid-template-columns: 0.5fr repeat(3, 1fr);
+                grid-template-areas: ". h1 h1 h1" ". contenido contenido contenido";
+                &__Titulo{
+                    font-size: 30px;
+                }
+                &__divGrid{
+                    display: flex;
+                    flex-direction: column;
+                    &__nombreH2{
+                        font-size: 30px;
+                    }
+                    &__imagen{
+                        display: none;
+                    }
+                    &__textoSobreMi{
+                        margin-right: 20px;
+                        font-size: 15px;
+                    }
+                }
+            }
+            .sectionEducacion{
+                grid-template-columns: 3fr 0.5fr;
+                &__divGrid{
+                    flex-direction: column;
+                    &__divFormacion{
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .sectionContacto{
+                grid-template-columns: 1fr 5fr 1.5fr;
+                grid-template-rows: auto 0.5fr 1fr;
+                grid-template-areas: "titulo titulo ." "contenido contenido contenido" "btn btn btn";
+                &__divFlex{
+                    padding-left: 5vw;
+                    margin-right: 20px;
+                    &__imgMail{
+                        display: none;
+                    }
+                    &__textoMail{
+                        margin-bottom: 10px;
+                    }
+                }
+                &__btnCV{
+                    margin: 20px;
+                    a{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+}

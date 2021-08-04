@@ -1,0 +1,608 @@
+/* Colores */
+/* Fuente */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #E09F3E;
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 10px auto;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 5;
+}
+
+body header nav {
+  background-color: #191919;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+body header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 0 auto;
+  width: 60vw;
+}
+
+body header nav ul li {
+  list-style-type: none;
+  margin: auto 0;
+}
+
+body header nav ul li a {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  color: #FDFFFC;
+}
+
+body header nav ul li a:hover {
+  color: #E09F3E;
+}
+
+body header nav .imgLogo {
+  height: 60px;
+}
+
+body main .sectionSobreMi {
+  padding-top: 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr (1fr)[3];
+      grid-template-columns: 0.5fr repeat(3, 1fr);
+      grid-template-areas: ". h1 h1 h1" ". contenido contenido contenido";
+}
+
+body main .sectionSobreMi__Titulo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: h1;
+  font-family: "Rubik", sans-serif;
+  color: #191919;
+  font-size: 30px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+body main .sectionSobreMi__divGrid {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: contenido;
+  background-color: #191919;
+  padding: 20px;
+  padding-bottom: 30px;
+  border-radius: 20px 0 0 20px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "nombre nombre" "foto texto";
+}
+
+body main .sectionSobreMi__divGrid__nombreH2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: nombre;
+  font-family: "Rubik", sans-serif;
+  color: #FDFFFC;
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+body main .sectionSobreMi__divGrid__imagen {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: foto;
+  height: 250px;
+}
+
+body main .sectionSobreMi__divGrid__textoSobreMi {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: texto;
+  font-family: "Rubik", sans-serif;
+  color: #FDFFFC;
+  font-weight: 300;
+  margin-right: 10vw;
+  font-size: 15px;
+  line-height: 25px;
+  padding-left: 10px;
+}
+
+body main .sectionEducacion {
+  padding-top: 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+      grid-template-areas: "titulo ." "contenido .";
+  margin: 20px 0;
+}
+
+body main .sectionEducacion__Titulo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: titulo;
+  font-family: "Rubik", sans-serif;
+  color: #191919;
+  font-size: 30px;
+  text-align: right;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+body main .sectionEducacion__divGrid {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: contenido;
+  background-color: #191919;
+  padding: 20px;
+  padding-bottom: 30px;
+  border-radius: 0 20px 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body main .sectionEducacion__divGrid__divFormacion {
+  margin-right: 40px;
+}
+
+body main .sectionEducacion__divGrid__divFormacion__h2 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: #E09F3E;
+  margin-bottom: 5px;
+}
+
+body main .sectionEducacion__divGrid__divFormacion__UTN {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+body main .sectionEducacion__divGrid__divFormacion__huergo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5px;
+}
+
+body main .sectionEducacion__divGrid__divCertificados__h2 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: #E09F3E;
+  margin-bottom: 5px;
+}
+
+body main .sectionEducacion__divGrid__divCertificados__dw {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5px;
+}
+
+body main .sectionEducacion__divGrid .hr {
+  background-color: #FDFFFC;
+  width: 2px;
+  height: 60px;
+  margin-right: 4px;
+}
+
+body main .sectionEducacion__divGrid .titulo {
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #FDFFFC;
+  margin-bottom: 2px;
+}
+
+body main .sectionEducacion__divGrid .lugar {
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #FDFFFC;
+  margin-bottom: 2px;
+}
+
+body main .sectionEducacion__divGrid .tiempo {
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #FDFFFC;
+  margin-bottom: 2px;
+}
+
+body main .sectionEducacion__divGrid .credencial {
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #4EA5D9;
+  margin-bottom: 2px;
+  text-decoration: none;
+}
+
+body main .sectionPortfolio {
+  padding-top: 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 6fr;
+      grid-template-columns: 1fr 6fr;
+      grid-template-areas: ". titulo" ". contenido";
+  margin: 20px 0;
+}
+
+body main .sectionPortfolio__Titulo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: titulo;
+  font-family: "Rubik", sans-serif;
+  color: #191919;
+  font-size: 30px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+body main .sectionPortfolio__divGrid {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: contenido;
+  background-color: #191919;
+  padding: 20px;
+  border-radius: 20px 0 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-right: 5vw;
+}
+
+body main .sectionPortfolio__divGrid .divProyecto {
+  width: 300px;
+  position: relative;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+body main .sectionPortfolio__divGrid .divProyecto .fotoProyecto {
+  width: 300px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+body main .sectionPortfolio__divGrid .divProyecto .divAbove {
+  border-radius: 20px;
+  width: 270px;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #191919b2;
+  padding: 0 15px;
+  padding-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body main .sectionPortfolio__divGrid .divProyecto .divAbove__titulo {
+  font-family: "Rubik", sans-serif;
+  color: #FDFFFC;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+body main .sectionPortfolio__divGrid .divProyecto .divAbove__btn {
+  width: 270px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  color: #FDFFFC;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #FDFFFC;
+  border-radius: 10px;
+  height: 40px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body main .sectionPortfolio__divGrid .divProyecto .divAbove__btn:hover {
+  color: #191919b2;
+  background-color: #FDFFFC;
+  font-weight: 400;
+}
+
+body main .sectionContacto {
+  padding-top: 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 6fr 1.5fr 1fr;
+      grid-template-columns: 1fr 6fr 1.5fr 1fr;
+      grid-template-areas: "titulo titulo . ." "contenido contenido btn .";
+  margin: 20px 0;
+}
+
+body main .sectionContacto__Titulo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: titulo;
+  font-family: "Rubik", sans-serif;
+  color: #191919;
+  font-size: 30px;
+  text-align: right;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+body main .sectionContacto__divFlex {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: contenido;
+  background-color: #191919;
+  padding: 20px;
+  border-radius: 0 20px 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-left: 200px;
+}
+
+body main .sectionContacto__divFlex div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body main .sectionContacto__divFlex img {
+  height: 40px;
+  margin-left: 10px;
+}
+
+body main .sectionContacto__divFlex__textoMail {
+  font-family: "Rubik", sans-serif;
+  color: #FDFFFC;
+  font-weight: 300;
+  margin: auto 0;
+  margin-left: 10px;
+}
+
+body main .sectionContacto__btnCV {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: btn;
+  background-color: #191919;
+  border-radius: 20px;
+  border: none;
+  margin-left: 20px;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+body main .sectionContacto__btnCV a {
+  text-decoration: none;
+  color: #FDFFFC;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+body main .sectionContacto__btnCV a:hover {
+  color: #E09F3E;
+}
+
+/* Para vista en tablet */
+@media only screen and (min-width: 600px) and (max-width: 960px) {
+  body main .sectionSobreMi {
+    -ms-grid-columns: 0.5fr (1fr)[3];
+        grid-template-columns: 0.5fr repeat(3, 1fr);
+        grid-template-areas: ". h1 h1 h1" ". contenido contenido contenido";
+  }
+  body main .sectionSobreMi__Titulo {
+    font-size: 30px;
+  }
+  body main .sectionSobreMi__divGrid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .sectionSobreMi__divGrid__nombreH2 {
+    font-size: 30px;
+  }
+  body main .sectionSobreMi__divGrid__imagen {
+    display: none;
+  }
+  body main .sectionSobreMi__divGrid__textoSobreMi {
+    margin-right: 20px;
+    font-size: 15px;
+  }
+  body main .sectionContacto {
+    -ms-grid-columns: 1fr 5fr 1.5fr;
+        grid-template-columns: 1fr 5fr 1.5fr;
+        grid-template-areas: "titulo titulo ." "contenido contenido btn";
+  }
+  body main .sectionContacto__divFlex {
+    padding-left: 5vw;
+  }
+  body main .sectionContacto__btnCV {
+    margin-right: 20px;
+  }
+  body main .sectionContacto__btnCV a {
+    font-size: 15px;
+  }
+}
+
+/* Para vista en celular */
+@media only screen and (max-width: 600px) {
+  body header {
+    position: static;
+    margin: 0;
+  }
+  body header nav {
+    background-color: #191919;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    padding: 10px 20px;
+    border-radius: 0;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+  }
+  body main .sectionSobreMi {
+    -ms-grid-columns: 0.5fr (1fr)[3];
+        grid-template-columns: 0.5fr repeat(3, 1fr);
+        grid-template-areas: ". h1 h1 h1" ". contenido contenido contenido";
+  }
+  body main .sectionSobreMi__Titulo {
+    font-size: 30px;
+  }
+  body main .sectionSobreMi__divGrid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .sectionSobreMi__divGrid__nombreH2 {
+    font-size: 30px;
+  }
+  body main .sectionSobreMi__divGrid__imagen {
+    display: none;
+  }
+  body main .sectionSobreMi__divGrid__textoSobreMi {
+    margin-right: 20px;
+    font-size: 15px;
+  }
+  body main .sectionEducacion {
+    -ms-grid-columns: 3fr 0.5fr;
+        grid-template-columns: 3fr 0.5fr;
+  }
+  body main .sectionEducacion__divGrid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .sectionEducacion__divGrid__divFormacion {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  body main .sectionContacto {
+    -ms-grid-columns: 1fr 5fr 1.5fr;
+        grid-template-columns: 1fr 5fr 1.5fr;
+    -ms-grid-rows: auto 0.5fr 1fr;
+        grid-template-rows: auto 0.5fr 1fr;
+        grid-template-areas: "titulo titulo ." "contenido contenido contenido" "btn btn btn";
+  }
+  body main .sectionContacto__divFlex {
+    padding-left: 5vw;
+    margin-right: 20px;
+  }
+  body main .sectionContacto__divFlex__imgMail {
+    display: none;
+  }
+  body main .sectionContacto__divFlex__textoMail {
+    margin-bottom: 10px;
+  }
+  body main .sectionContacto__btnCV {
+    margin: 20px;
+  }
+  body main .sectionContacto__btnCV a {
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=estilo.css.map */
