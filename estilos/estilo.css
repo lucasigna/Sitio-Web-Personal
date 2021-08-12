@@ -116,7 +116,7 @@ body main .sectionSobreMi__divGrid {
   border-radius: 20px 0 0 20px;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "nombre nombre" "foto texto";
+      grid-template-areas: "nombre nombre" "foto texto" "foto conocimientos";
 }
 
 body main .sectionSobreMi__divGrid__nombreH2 {
@@ -133,6 +133,7 @@ body main .sectionSobreMi__divGrid__nombreH2 {
 
 body main .sectionSobreMi__divGrid__imagen {
   -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: foto;
   height: 250px;
@@ -149,6 +150,36 @@ body main .sectionSobreMi__divGrid__textoSobreMi {
   font-size: 15px;
   line-height: 25px;
   padding-left: 10px;
+}
+
+body main .sectionSobreMi__divGrid__divFlexConocimientos {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: conocimientos;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+body main .sectionSobreMi__divGrid__divFlexConocimientos__itemFlex {
+  font-family: "Rubik", sans-serif;
+  color: #FDFFFC;
+  font-weight: 300;
+  font-size: 13px;
+  text-align: center;
+  border: 1px solid #FDFFFC;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 body main .sectionEducacion {

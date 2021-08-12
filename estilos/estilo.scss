@@ -74,7 +74,7 @@ body{
                 padding-bottom: 30px;
                 border-radius: 20px 0 0 20px;
                 display: grid;
-                grid-template-areas: "nombre nombre" "foto texto";
+                grid-template-areas: "nombre nombre" "foto texto" "foto conocimientos";
                 &__nombreH2{
                     grid-area: nombre;
                     font-family: $fuente;
@@ -96,6 +96,26 @@ body{
                     font-size: 15px;
                     line-height: 25px;
                     padding-left: 10px;
+                }
+                &__divFlexConocimientos{
+                    grid-area: conocimientos;
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-content: flex-end;
+                    padding-left: 10px;
+                    padding-top: 10px;
+                    &__itemFlex{
+                        font-family: $fuente;
+                        color: $colorBlanco;
+                        font-weight: 300;
+                        font-size: 13px;
+                        text-align: center;
+                        border: 1px solid $colorBlanco;
+                        border-radius: 5px;
+                        padding: 5px 10px;
+                        margin-right: 5px;
+                        margin-bottom: 5px;
+                    }
                 }
             }
         }
