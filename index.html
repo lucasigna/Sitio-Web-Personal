@@ -34,6 +34,7 @@
     <meta property="twitter:image" content="./img/img_preview.jpg">
 </head>
 <body>
+    <div class="divColorAboveBody"></div>
     <header id="headerTop">
         <nav id="navTop">
             <ul>
@@ -47,8 +48,8 @@
     </header>
     <main id="main">
         <section id="sobremi" class="sectionSobreMi animate__animated animate__bounceInRight wow"><!-- Grid -->
-            <h1 class="sectionSobreMi__Titulo">Sobre mi</h1>
-            <div class="sectionSobreMi__divGrid"><!-- Grid -->
+            <h1 id="h1SobreMi" class="sectionSobreMi__Titulo">Sobre mi</h1>
+            <div id="divSobreMi" class="sectionSobreMi__divGrid"><!-- Grid -->
                 <h2 class="sectionSobreMi__divGrid__nombreH2">Lucas González</h2>
                 <img class="sectionSobreMi__divGrid__imagen" src="./img/foto_sobre_mi.png" alt="">
                 <p class="sectionSobreMi__divGrid__textoSobreMi">Tengo 22 años, estudio Ingeniería Electrónica pero también me interesa la programación en general. Estoy cursando la carrera de Desarrollo Full Stack en Coderhouse. Tengo buenas bases de programación gracias al haber programado en varios lenguajes (C, Java, JS, etc.). Tengo espíritu emprendedor, ya intenté desarrollar un negocio en 2019 y aprendí muchísimo. Aspiro a desarrollar emprendimientos tecnológicos que aporten valor a la sociedad. Por el momento busco un empleo como desarrollador Front-End Junior.</p>
@@ -67,8 +68,8 @@
             </div>
         </section>
         <section id="educacion" class="sectionEducacion animate__animated animate__bounceInLeft wow"><!-- Grid -->
-            <h2 class="sectionEducacion__Titulo">Educación</h2>
-            <div class="sectionEducacion__divGrid"><!-- Grid -->
+            <h2 id="h2Educacion" class="sectionEducacion__Titulo">Educación</h2>
+            <div id="divEducacion" class="sectionEducacion__divGrid"><!-- Grid -->
                 <div class="sectionEducacion__divGrid__divFormacion">
                     <h2 class="sectionEducacion__divGrid__divFormacion__h2">Formación</h2>
                     <div class="sectionEducacion__divGrid__divFormacion__UTN">
@@ -102,8 +103,8 @@
             </div>
         </section>
         <section id="portfolio" class="sectionPortfolio animate__animated animate__bounceInRight wow"><!-- Grid -->
-            <h2 class="sectionPortfolio__Titulo">Portfolio</h2>
-            <div class="sectionPortfolio__divGrid"><!-- Grid -->
+            <h2 id="h2Portfolio" class="sectionPortfolio__Titulo">Portfolio</h2>
+            <div id="divPortfolio" class="sectionPortfolio__divGrid"><!-- Grid -->
                 <div class="divProyecto">
                     <img class="fotoProyecto" src="./img/covid.png" alt="">
                     <div class="divAbove">
@@ -139,8 +140,8 @@
             </div>
         </section>
         <section id="contacto" class="sectionContacto animate__animated animate__bounceInLeft wow"><!-- Grid -->
-            <h1 class="sectionContacto__Titulo">Contacto</h1>
-            <div class="sectionContacto__divFlex">
+            <h1 id="h2Contacto" class="sectionContacto__Titulo">Contacto</h1>
+            <div id="divContacto" class="sectionContacto__divFlex">
                 <div>
                     <img class="sectionContacto__divFlex__imgMail" src="./img/gmail.png" alt=""/>
                     <p class="sectionContacto__divFlex__textoMail">lucasignaciogonzalez1999@gmail.com</p>
@@ -151,9 +152,10 @@
                     <a target="_blank" href="https://www.linkedin.com/in/lucas-ignacio-gonz%C3%A1lez-57a4ba170/"><img class="sectionContacto__divFlex__imgLinkedin" src="./img/linkedin.png" alt=""/></a>    
                 </div>
             </div>
-            <button class="sectionContacto__btnCV"><a target="_blank" href="https://drive.google.com/file/d/1bPsA6hg389fvEnqBnV0p2ZEG1uxHOt_S/view?usp=sharing">Descargá mi CV</a></button>
+            <button id="btnCV" class="sectionContacto__btnCV"><a target="_blank" href="https://drive.google.com/file/d/1bPsA6hg389fvEnqBnV0p2ZEG1uxHOt_S/view?usp=sharing">Descargá mi CV</a></button>
         </section>
     </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="js/wow.min.js"></script>
     <script>

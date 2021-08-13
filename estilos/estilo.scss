@@ -6,7 +6,20 @@
 }
 
 body{
-    background-color: $colorNaranjaFondo;
+    background: url('../img/fondo_code.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    .divColorAboveBody{
+        z-index: 3;
+        position: fixed;
+        background-color: $colorNaranjaFondo;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transition: all 0.5s ease;
+    }
     header{
         display: flex;
         justify-content: center;
@@ -26,8 +39,6 @@ body{
             padding: 10px 20px;
             border-radius: 20px;
             transition: all 0.5s ease;
-            transition-property: all;
-            transition-duration: 1s;
             ul{
                 display: flex;
                 justify-content: space-between;
@@ -54,6 +65,8 @@ body{
         }
     }
     main{
+        position: relative;
+        z-index: 4;
         .sectionSobreMi{
             padding-top: 100px;
             display: grid;
@@ -66,6 +79,7 @@ body{
                 font-size: 30px;
                 margin-left: 5px;
                 margin-bottom: 5px;
+                transition: all 0.5s ease;
             }
             &__divGrid{
                 grid-area: contenido;
@@ -75,6 +89,7 @@ body{
                 border-radius: 20px 0 0 20px;
                 display: grid;
                 grid-template-areas: "nombre nombre" "foto texto" "foto conocimientos";
+                transition: all 0.5s ease;
                 &__nombreH2{
                     grid-area: nombre;
                     font-family: $fuente;
@@ -133,6 +148,7 @@ body{
                 text-align: right;
                 margin-right: 5px;
                 margin-bottom: 5px;
+                transition: all 0.5s ease;
             }
             &__divGrid{
                 grid-area: contenido;
@@ -142,6 +158,7 @@ body{
                 border-radius: 0 20px 20px 0;
                 display: flex;
                 justify-content: flex-end;
+                transition: all 0.5s ease;
                 &__divFormacion{
                     margin-right: 40px;
                     &__h2{
@@ -225,6 +242,7 @@ body{
                 font-size: 30px;
                 margin-left: 5px;
                 margin-bottom: 5px;
+                transition: all 0.5s ease;
             }
             &__divGrid{
                 grid-area: contenido;
@@ -234,6 +252,7 @@ body{
                 display: flex;
                 flex-wrap: wrap;
                 padding-right: 5vw;
+                transition: all 0.5s ease;
                 .divProyecto{
                     width: 300px;
                     position: relative;
@@ -302,6 +321,7 @@ body{
                 text-align: right;
                 margin-right: 5px;
                 margin-bottom: 5px;
+                transition: all 0.5s ease;
             }
             &__divFlex{
                 grid-area: contenido;
@@ -313,6 +333,7 @@ body{
                 justify-content: space-between;
                 align-content: center;
                 padding-left: 200px;
+                transition: all 0.5s ease;
                 div{
                     display: flex;
                     align-content: center;
@@ -402,7 +423,7 @@ body{
 
     body{
         header{
-            position: static;
+            position: relative;
             margin: 0;
             nav{
                 background-color: $colorNegro;

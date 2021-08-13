@@ -6,7 +6,22 @@
 }
 
 body {
+  background: url("../img/fondo_code.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body .divColorAboveBody {
+  z-index: 3;
+  position: fixed;
   background-color: #E09F3E;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 body header {
@@ -45,10 +60,6 @@ body header nav {
   border-radius: 20px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
 }
 
 body header nav ul {
@@ -84,6 +95,11 @@ body header nav .imgLogo {
   height: 60px;
 }
 
+body main {
+  position: relative;
+  z-index: 4;
+}
+
 body main .sectionSobreMi {
   padding-top: 100px;
   display: -ms-grid;
@@ -103,6 +119,8 @@ body main .sectionSobreMi__Titulo {
   font-size: 30px;
   margin-left: 5px;
   margin-bottom: 5px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 body main .sectionSobreMi__divGrid {
@@ -117,6 +135,8 @@ body main .sectionSobreMi__divGrid {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "nombre nombre" "foto texto" "foto conocimientos";
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 body main .sectionSobreMi__divGrid__nombreH2 {
@@ -203,6 +223,8 @@ body main .sectionEducacion__Titulo {
   text-align: right;
   margin-right: 5px;
   margin-bottom: 5px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 body main .sectionEducacion__divGrid {
@@ -220,6 +242,8 @@ body main .sectionEducacion__divGrid {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 body main .sectionEducacion__divGrid__divFormacion {
@@ -324,6 +348,8 @@ body main .sectionPortfolio__Titulo {
   font-size: 30px;
   margin-left: 5px;
   margin-bottom: 5px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 body main .sectionPortfolio__divGrid {
@@ -340,6 +366,8 @@ body main .sectionPortfolio__divGrid {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-right: 5vw;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 body main .sectionPortfolio__divGrid .divProyecto {
@@ -428,6 +456,8 @@ body main .sectionContacto__Titulo {
   text-align: right;
   margin-right: 5px;
   margin-bottom: 5px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 body main .sectionContacto__divFlex {
@@ -449,6 +479,8 @@ body main .sectionContacto__divFlex {
   -ms-flex-line-pack: center;
       align-content: center;
   padding-left: 200px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 body main .sectionContacto__divFlex div {
@@ -544,7 +576,7 @@ body main .sectionContacto__btnCV a:hover {
 /* Para vista en celular */
 @media only screen and (max-width: 600px) {
   body header {
-    position: static;
+    position: relative;
     margin: 0;
   }
   body header nav {
