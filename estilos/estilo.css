@@ -41,7 +41,7 @@ body header {
   z-index: 5;
 }
 
-body header nav {
+body header #navTop {
   background-color: #191919;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -62,7 +62,7 @@ body header nav {
   transition: all 0.5s ease;
 }
 
-body header nav ul {
+body header #navTop ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,24 +75,28 @@ body header nav ul {
   width: 60vw;
 }
 
-body header nav ul li {
+body header #navTop ul li {
   list-style-type: none;
   margin: auto 0;
 }
 
-body header nav ul li a {
+body header #navTop ul li a {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
   text-decoration: none;
   color: #FDFFFC;
 }
 
-body header nav ul li a:hover {
+body header #navTop ul li a:hover {
   color: #E09F3E;
 }
 
-body header nav .imgLogo {
+body header #navTop .imgLogo {
   height: 60px;
+}
+
+body header #navTopMobile {
+  display: none;
 }
 
 body main {
@@ -405,6 +409,13 @@ body main .sectionPortfolio__divGrid .divProyecto .divAbove {
           flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center;
+  opacity: 0.0;
+}
+
+body main .sectionPortfolio__divGrid .divProyecto .divAbove:hover {
+  opacity: 1.0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 body main .sectionPortfolio__divGrid .divProyecto .divAbove__titulo {
@@ -557,6 +568,9 @@ body main .sectionContacto__btnCV a:hover {
     margin-right: 20px;
     font-size: 15px;
   }
+  body main .sectionPortfolio__divGrid .divProyecto .divAbove {
+    opacity: 1.0;
+  }
   body main .sectionContacto {
     -ms-grid-columns: 1fr 5fr 1.5fr;
         grid-template-columns: 1fr 5fr 1.5fr;
@@ -576,32 +590,77 @@ body main .sectionContacto__btnCV a:hover {
 /* Para vista en celular */
 @media only screen and (max-width: 600px) {
   body header {
-    position: relative;
+    display: block;
     margin: 0;
   }
-  body header nav {
-    background-color: #191919;
-    width: 100vw;
+  body header #navTop {
+    display: none;
+  }
+  body header #navTop ul li .linksPagina {
+    display: none;
+  }
+  body header #navTopMobile {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    border-radius: none;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background-color: #191919;
+  }
+  body header #navTopMobile .mobileHeader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -ms-flex-line-pack: center;
         align-content: center;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    padding-top: 10px;
+  }
+  body header #navTopMobile .mobileHeader .imgIconMenu {
+    height: 50px;
+    margin: auto 0;
+  }
+  body header #navTopMobile .mobileHeader .imgLogo {
+    height: 50px;
+  }
+  body header #navTopMobile ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+  body header #navTopMobile ul li {
+    list-style-type: none;
+    margin-bottom: 5px;
+    border-top: 1px solid #FDFFFC;
     padding: 10px 20px;
-    border-radius: 0;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    -webkit-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 1s;
-            transition-duration: 1s;
+  }
+  body header #navTopMobile ul li a {
+    display: block;
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #FDFFFC;
+  }
+  body header #navTopMobile ul li a:hover {
+    color: #E09F3E;
   }
   body main .sectionSobreMi {
     -ms-grid-columns: 0.5fr (1fr)[3];
@@ -643,6 +702,9 @@ body main .sectionContacto__btnCV a:hover {
   body main .sectionEducacion__divGrid__divFormacion {
     margin-right: 0;
     margin-bottom: 10px;
+  }
+  body main .sectionPortfolio__divGrid .divProyecto .divAbove {
+    opacity: 1.0;
   }
   body main .sectionContacto {
     -ms-grid-columns: 1fr 5fr 1.5fr;

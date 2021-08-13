@@ -13,55 +13,21 @@ $(document).ready(function() {
     let h2Educacion = $('#h2Educacion');
     let h2Portfolio = $('#h2Portfolio');
     let h2Contacto = $('#h2Contacto');
+    let nav = $('#navTop');
+    let navMobile = $('#navTopMobile');
+    let ulMobile = $('#ulMobile');
+    let btnMenu = $('.imgIconMenu');
 
-    window.addEventListener("orientationchange", recargarPagina);
-
-    function recargarPagina(e) {
-        window.location.reload(true);
-    }
-
-    if (window.screen.width > 960) {
-
-        for (const i in divsHoverAbovePortfolio) {
-        
-            divsHoverAbovePortfolio.eq(i).css({'opacity':'0.0'});
-            divsHoverAbovePortfolio.eq(i).on('mouseenter', mostrarLinksProyecto);
-            divsHoverAbovePortfolio.eq(i).on('mouseleave', ocultarLinksProyecto);
-
-        }
-
-    }
-
-    if (window.screen.width < 600) {
-
-        for (const link of linksPaginaHeader) {
-        
-            $(link).css({'display':'none'});
-
-        }
-
-    }
-
+    ulMobile.hide();
+    
+    btnMenu.click(function() {
+        ulMobile.toggle('fast');
+    });
 
     document.addEventListener('scroll', ajustarHeader);
 
-    function mostrarLinksProyecto(event) {
-        event.preventDefault();
-        if (event.target.tagName == 'DIV') {
-            $(event.target).css({'opacity':'1.0'});   
-        }
-    }
-
-    function ocultarLinksProyecto(event) {
-        event.preventDefault();
-        if (event.target.tagName == 'DIV') {
-            $(event.target).css({'opacity':'0.0'});
-        }
-    }
-
     function ajustarHeader() {
 
-        let nav = $('#navTop');
         let top = window.scrollY;
         if (window.screen.width >= 600) {
             nav.css({'border-radius':'20px'});   
@@ -78,6 +44,7 @@ $(document).ready(function() {
         h2Educacion.css({'color':'#191919'});
         h2Portfolio.css({'color':'#191919'});
         h2Contacto.css({'color':'#191919'});
+        navMobile.css({'border-bottom':'none'});
         if (top < 100 && top >= 60) {
             divColorAboveBody.css({'opacity':`${1-(top/100)}`});
             if (window.screen.width < 600) {
@@ -97,6 +64,7 @@ $(document).ready(function() {
             h2Educacion.css({'color':'#FDFFFC'});
             h2Portfolio.css({'color':'#FDFFFC'});
             h2Contacto.css({'color':'#FDFFFC'});
+            navMobile.css({'border-bottom':'2px solid #FDFFFC'});
             if (window.screen.width < 600) {
                 return;
             }
