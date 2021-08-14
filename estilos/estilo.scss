@@ -5,6 +5,28 @@
     padding: 0;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: $colorNegro;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;       
+    border: 3px solid $colorNegro;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 body{
     background: url('../img/fondo_code.jpg');
     background-size: cover;
