@@ -312,6 +312,7 @@ body main .sectionEducacion__divGrid__divCertificados__dw {
   display: -ms-flexbox;
   display: flex;
   margin-left: 5px;
+  margin-bottom: 20px;
 }
 
 body main .sectionEducacion__divGrid .hr {
