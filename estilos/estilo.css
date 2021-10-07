@@ -27,6 +27,10 @@
   background: #555;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: url("../img/fondo_code.jpg");
   background-size: cover;
