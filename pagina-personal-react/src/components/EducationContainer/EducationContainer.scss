@@ -1,0 +1,12 @@
+@import '../../assets/_variables.scss';
+
+.divEducation{
+    margin: 20px;
+    h2{
+        color: $colorNaranja;
+    }
+    .divEducationList{
+        display: flex;
+        margin: 20px;
+    }
+}
