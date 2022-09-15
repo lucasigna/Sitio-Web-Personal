@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4a90e91d.css",
+    "main.js": "/static/js/main.1727bd02.js",
+    "static/js/787.f484ffd9.chunk.js": "/static/js/787.f484ffd9.chunk.js",
+    "static/media/foto_cv.png": "/static/media/foto_cv.5844894998b0ed8e7128.png",
+    "static/media/rick_and_morty.jpg": "/static/media/rick_and_morty.cec3708d9433c4928c2e.jpg",
+    "static/media/hamburguesa.jpg": "/static/media/hamburguesa.84cc717d6f68fe9342d1.jpg",
+    "static/media/crypto.jpg": "/static/media/crypto.fc8bc2d65278c18f8088.jpg",
+    "static/media/covid.jpg": "/static/media/covid.07db2817b88bb9fcc719.jpg",
+    "static/media/infomap.jpg": "/static/media/infomap.01be16d0f75054a4913c.jpg",
+    "static/media/conversor.jpg": "/static/media/conversor.44b784171ff146ffd112.jpg",
+    "static/media/geoquiz.jpg": "/static/media/geoquiz.626dd1fd4936c55e61f3.jpg",
+    "index.html": "/index.html",
+    "main.4a90e91d.css.map": "/static/css/main.4a90e91d.css.map",
+    "main.1727bd02.js.map": "/static/js/main.1727bd02.js.map",
+    "787.f484ffd9.chunk.js.map": "/static/js/787.f484ffd9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a90e91d.css",
+    "static/js/main.1727bd02.js"
+  ]
+}
