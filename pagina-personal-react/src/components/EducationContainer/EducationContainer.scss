@@ -7,6 +7,18 @@
     }
     .divEducationList{
         display: flex;
+        flex-wrap: wrap;
         margin: 20px;
     }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .divEducation{
+        .divEducationList{
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+    }
+
 }

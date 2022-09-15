@@ -9,7 +9,7 @@
     border-radius: 20px;
     .aboutMe_img{
         grid-area: img;
-        height: 200px;
+        width: 200px;
         margin: 10px;
         border-radius: 20px;
     }
@@ -24,6 +24,8 @@
         color: $colorBlanco;
         margin: 10px;
         font-size: 16px;
+        font-weight: lighter;
+        line-height: 22px;
     }
     .divAboutMeTags{
         grid-area: tags;
@@ -34,8 +36,20 @@
             border: 1px solid $colorBlanco;
             font-size: 14px;
             border-radius: 10px;
-            padding: 5px;
+            padding: 5px 10px;
             margin: 5px;
         }
     }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .divAboutMeContainer{
+        display: flex;
+        flex-direction: column;
+        .aboutMe_img{
+            width: auto;
+        }
+    }
+
 }

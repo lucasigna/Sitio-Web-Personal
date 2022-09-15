@@ -7,12 +7,19 @@ export const AboutMeContainer = () => {
     <Animated animationIn="fadeIn" isVisible={true}>
       <div className="divAboutMeContainer">
           <img src={require('../../assets/foto_cv.png')} className="aboutMe_img"/>
-          <h2 className="aboutMe_h2">Lucas González</h2>
-          <p className="aboutMe_p">Tengo 22 años, estudio Ingeniería Electrónica pero también me interesa la programación en general. Estoy cursando la carrera de Desarrollo Full Stack en Coderhouse. Tengo buenas bases de programación gracias al haber programado en varios lenguajes (C, Java, JS, etc.). Tengo espíritu emprendedor, ya intenté desarrollar un negocio en 2019 y aprendí muchísimo. Aspiro a desarrollar emprendimientos tecnológicos que aporten valor a la sociedad. Por el momento busco un empleo como desarrollador Front-End Junior.</p>
+          <h2 className="aboutMe_h2">Lucas Ignacio González</h2>
+          <p className="aboutMe_p">Tengo 23 años y estoy casi en 4to año de Ingeniería Electrónica en UTN FRA. Estoy interesado en desenvolverme en el rubro de electrónica, robótica, domótica, inmótica, IoT, entre otros. Me interesa combinar la electrónica con la programación y poder desarrollar productos con esas bases. Trabajé como desarrollador web y tengo experiencia en haber programado con Javascript y C#. Además por interés personal, y por la universidad y colegio, he programado en varios lenguajes como C, Python, C++, Java, Dart, entre otros. Tengo algunas bases de haber estudiado por mi cuenta bases de datos SQL y NoSQL como las son MariaDB, SQLite3, MongoDB, etc. <br/><br/>Aspiro en el futuro desarrollar emprendimientos tecnológicos que aporten valor a la sociedad.</p>
           <div className="divAboutMeTags">
+              <p>C</p>
               <p>Python</p>
-              <p>Python</p>
-              <p>Python</p>
+              <p>JavaScript</p>
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>Visual Studio Code</p>
+              <p>KiCad</p>
+              <p>Proteus 8</p>
+              <p>Git</p>
+              <p>Arduino</p>
           </div>
       </div>
     </Animated>
